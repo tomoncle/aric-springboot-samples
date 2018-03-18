@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.aric.tomcat.dbcp.mapper.MajorMapper">
+    <!--映射数据库字段与类属性
+            如果表之间属性名称冲突,
+            需要在查询语句中使用"table.column AS other_name"来重新定义,
+            在resultMap中column="other_name"来重新指定.
+    -->
+    <resultMap id="majorMap" type="com.aric.tomcat.dbcp.entity.Major">
+        <id column="id" property="id" jdbcType="INTEGER"/>
+        <result column="name" property="name" jdbcType="VARCHAR"/>
+        <result column="description" property="description" jdbcType="VARCHAR"/>
+        <!--加载 StudentList,
+                select:查询函数id,
+                property:属性值，
+                column：参数传参(param1=value1,param2=value2)，
+                ofType：映射对象-->
+        <collection select="studentListByMajorId"
+                    property="studentList"
+                    column="{majorId=id}"
+                    ofType="com.aric.tomcat.dbcp.entity.Student">
+        </collection>
+        <!--加载 courseList -->
+        <collection select="courseListByMajorId"
+                    property="courseList"
+                    column="{majorId=id}"
+                    ofType="com.aric.tomcat.dbcp.entity.Course">
+        </collection>
+    </resultMap>
+
+    <!--所属专业的学生-->
+    <resultMap id="studentMap" type="com.aric.tomcat.dbcp.entity.Student">
+        <id column="id" property="id" jdbcType="INTEGER"/>
+        <result column="student_no" property="studentNo" jdbcType="INTEGER"/>
+        <result column="name" property="name" jdbcType="VARCHAR"/>
+        <!--其余属性不需要加载-->
+    </resultMap>
+
+    <!--所属专业的课程-->
+    <resultMap id="courseMap" type="com.aric.tomcat.dbcp.entity.Course">
+        <id column="id" property="id" jdbcType="INTEGER"/>
+        <result column="name" property="name" jdbcType="VARCHAR"/>
+        <result column="description" property="description" jdbcType="VARCHAR"/>
+        <!--其余属性不需要加载-->
+    </resultMap>
+
+    <select id="studentListByMajorId" resultMap="studentMap">
+       SELECT *
+       FROM t_student
+       WHERE major_id = #{majorId}
+    </select>
+    <select id="courseListByMajorId" resultMap="courseMap">
+       SELECT *
+       FROM t_course
+       WHERE
+       id in (SELECT course_id FROM t_course_major WHERE major_id = #{majorId})
+    </select>
+
+    <!--list-->
+    <select id="getAll" resultMap="majorMap">
+       SELECT *
+       FROM t_major
+       ORDER BY id DESC
+    </select>
+
+</mapper>

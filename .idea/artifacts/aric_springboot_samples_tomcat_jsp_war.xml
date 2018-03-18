@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="aric-springboot-samples-tomcat-jsp:war">
+    <output-path>$PROJECT_DIR$/aric-springboot-samples-tomcat-jsp/target</output-path>
+    <root id="archive" name="aric-springboot-samples-tomcat-jsp.war">
+      <element id="artifact" artifact-name="aric-springboot-samples-tomcat-jsp:war exploded" />
+    </root>
+  </artifact>
+</component>

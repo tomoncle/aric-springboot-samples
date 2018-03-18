@@ -1,0 +1,11 @@
+#server:
+#  port: 8086
+#  context-path: /web
+
+#####################freemaker###########################
+spring:
+  freemarker:
+      template-loader-path: /WEB-INF/templates/
+      suffix: .ftl
+      enabled: true
+

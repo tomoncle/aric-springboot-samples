@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/aric-springboot-samples.iml" filepath="$PROJECT_DIR$/aric-springboot-samples.iml" />
+      <module fileurl="file://$PROJECT_DIR$/aric-springboot-samples-tomcat-dbcp/aric-springboot-samples-tomcat-dbcp.iml" filepath="$PROJECT_DIR$/aric-springboot-samples-tomcat-dbcp/aric-springboot-samples-tomcat-dbcp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/aric-springboot-samples-tomcat-env/aric-springboot-samples-tomcat-env.iml" filepath="$PROJECT_DIR$/aric-springboot-samples-tomcat-env/aric-springboot-samples-tomcat-env.iml" />
+      <module fileurl="file://$PROJECT_DIR$/aric-springboot-samples-tomcat-freemarker/aric-springboot-samples-tomcat-freemarker.iml" filepath="$PROJECT_DIR$/aric-springboot-samples-tomcat-freemarker/aric-springboot-samples-tomcat-freemarker.iml" />
+      <module fileurl="file://$PROJECT_DIR$/aric-springboot-samples-tomcat-jsp/aric-springboot-samples-tomcat-jsp.iml" filepath="$PROJECT_DIR$/aric-springboot-samples-tomcat-jsp/aric-springboot-samples-tomcat-jsp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/aric-springboot-samples-tomcat-mail/aric-springboot-samples-tomcat-mail.iml" filepath="$PROJECT_DIR$/aric-springboot-samples-tomcat-mail/aric-springboot-samples-tomcat-mail.iml" />
+      <module fileurl="file://$PROJECT_DIR$/aric-springboot-samples-tomcat-mybatis/aric-springboot-samples-tomcat-mybatis.iml" filepath="$PROJECT_DIR$/aric-springboot-samples-tomcat-mybatis/aric-springboot-samples-tomcat-mybatis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/aric-springboot-samples-tomcat-restful/aric-springboot-samples-tomcat-restful.iml" filepath="$PROJECT_DIR$/aric-springboot-samples-tomcat-restful/aric-springboot-samples-tomcat-restful.iml" />
+      <module fileurl="file://$PROJECT_DIR$/aric-springboot-samples-web-freemarker/aric-springboot-samples-web-freemarker.iml" filepath="$PROJECT_DIR$/aric-springboot-samples-web-freemarker/aric-springboot-samples-web-freemarker.iml" />
+      <module fileurl="file://$PROJECT_DIR$/aric-springboot-samples-web-jsp/aric-springboot-samples-web-jsp.iml" filepath="$PROJECT_DIR$/aric-springboot-samples-web-jsp/aric-springboot-samples-web-jsp.iml" />
+    </modules>
+  </component>
+</project>

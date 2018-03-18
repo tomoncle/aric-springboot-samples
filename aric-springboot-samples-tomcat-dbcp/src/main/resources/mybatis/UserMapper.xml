@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.aric.tomcat.dbcp.mapper.UserMapper">
+    <!--映射数据库字段与类属性-->
+    <resultMap id="UserMap" type="com.aric.tomcat.dbcp.entity.User">
+        <id column="id" property="id" jdbcType="INTEGER"/>
+        <result column="username" property="username" jdbcType="VARCHAR"/>
+        <result column="password" property="password" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <!--list-->
+    <select id="users" resultMap="UserMap">
+        SELECT  *
+        FROM  t_user
+        WHERE 1=1
+        <if test='username!=null and username!=""'>
+           AND username LIKE CONCAT('%',#{username},'%')
+        </if>
+    </select>
+
+    <!--get-->
+    <select id="getUserById" resultMap="UserMap">
+       SELECT *
+       FROM t_user
+       WHERE id = #{userId}
+    </select>
+
+    <!--主键自增-->
+    <insert id="insertUser" useGeneratedKeys="true" keyProperty="id" keyColumn="id">
+        INSERT
+        INTO t_user (
+         username,
+         password)
+        VALUES (
+         #{user.username},
+         #{user.password})
+    </insert>
+
+    <update id="updateUser" >
+        UPDATE t_user
+        SET
+          username = #{user.username},
+          password = #{user.password}
+        WHERE id = #{user.id}
+    </update>
+
+    <delete id="deleteUser">
+        DELETE FROM t_user
+        WHERE id = #{userId}
+    </delete>
+</mapper>

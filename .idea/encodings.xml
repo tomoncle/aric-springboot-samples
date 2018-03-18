@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="true" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/aric-springboot-samples-tomcat-dbcp" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/aric-springboot-samples-tomcat-env" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/aric-springboot-samples-tomcat-freemarker" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/aric-springboot-samples-tomcat-jsp" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/aric-springboot-samples-tomcat-mail" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/aric-springboot-samples-tomcat-mybatis" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/aric-springboot-samples-tomcat-restful" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/aric-springboot-samples-web-freemarker" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/aric-springboot-samples-web-jsp" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>

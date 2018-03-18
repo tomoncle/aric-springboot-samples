@@ -1,0 +1,16 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="aric-springboot-samples-tomcat-jsp:war exploded">
+    <output-path>$PROJECT_DIR$/aric-springboot-samples-tomcat-jsp/target/aric-springboot-samples-tomcat-jsp</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="aric-springboot-samples-tomcat-jsp" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/aric-springboot-samples-tomcat-jsp/target/aric-springboot-samples-tomcat-jsp/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="aric-springboot-samples-tomcat-jsp/web/Web" />
+    </root>
+  </artifact>
+</component>
